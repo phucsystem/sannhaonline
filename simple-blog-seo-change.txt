@@ -1,0 +1,3 @@
+- In this extension customer now set blog seo url according to they required, now not showing default simple-blog when blog clicked.
+
+- Customer set name in admin side, if not set admin side then default simple-blog is shown, otherwise showing according to set name admin side.

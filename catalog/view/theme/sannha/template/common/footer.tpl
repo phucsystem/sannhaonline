@@ -30,6 +30,7 @@
     <script src="catalog/view/theme/sannha/stylesheet/js/jquery.simplyscroll.js"></script>
     <script src="catalog/view/theme/sannha/stylesheet/js/bootstrap.js"></script>
     <script src="catalog/view/theme/sannha/stylesheet/js/bootstrap-select.js"></script>
+    <script src="catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js" ></script>
     <!-- Manual Script -->
     <script>
     $('#main-carousel').carousel({

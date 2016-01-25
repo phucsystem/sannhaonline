@@ -28,10 +28,12 @@
         <link href="catalog/view/theme/sannha/stylesheet/css/bootstrap-select.css" rel="stylesheet" />
         <link href="catalog/view/theme/sannha/stylesheet/css/jquery.simplyscroll.css" rel="stylesheet" />
         <link href="catalog/view/theme/sannha/stylesheet/css/materialdesignicons.css" rel="stylesheet" />
+        <link href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500italic,500,700,700italic' rel='stylesheet' type='text/css' />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
         <!-- Customize CSS -->
         <link href="catalog/view/theme/sannha/stylesheet/css/gpat.css" rel="stylesheet" />
+        
         <!-- Just for debugging purposes. Don't actually copy this line! -->
         <!--[if lt IE 9]><script src="catalog/view/theme/sannha/stylesheet/catalog/view/theme/sannha/stylesheet/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

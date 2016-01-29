@@ -12,7 +12,15 @@ class ModelCatalogProduct extends Model {
 		}
 
 		foreach ($data['product_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" 
+                                . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" 
+                                . $this->db->escape($value['name']) 
+                                . "', description = '" . $this->db->escape($value['description']) 
+                                . "', introduction = '" . $this->db->escape($value['introduction']) 
+                                . "', location = '" . $this->db->escape($value['location']) 
+                                . "', utility = '" . $this->db->escape($value['utility']) 
+                                . "', payment = '" . $this->db->escape($value['payment']) 
+                                . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
 		if (isset($data['product_store'])) {
@@ -137,7 +145,15 @@ class ModelCatalogProduct extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id = '" . (int)$product_id . "'");
 
 		foreach ($data['product_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET product_id = '" . (int)$product_id 
+                                . "', language_id = '" . (int)$language_id 
+                                . "', name = '" . $this->db->escape($value['name']) 
+                                . "', description = '" . $this->db->escape($value['description']) 
+                                . "', introduction = '" . $this->db->escape($value['introduction']) 
+                                . "', location = '" . $this->db->escape($value['location']) 
+                                . "', utility = '" . $this->db->escape($value['utility']) 
+                                . "', payment = '" . $this->db->escape($value['payment']) 
+                                . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_to_store WHERE product_id = '" . (int)$product_id . "'");
@@ -423,6 +439,10 @@ class ModelCatalogProduct extends Model {
 			$product_description_data[$result['language_id']] = array(
 				'name'             => $result['name'],
 				'description'      => $result['description'],
+                            'introduction'      => $result['introduction'],
+                            'location'      => $result['location'],
+                            'utility'      => $result['utility'],
+                            'payment'      => $result['payment'],
 				'meta_title'       => $result['meta_title'],
 				'meta_description' => $result['meta_description'],
 				'meta_keyword'     => $result['meta_keyword'],

@@ -57,12 +57,37 @@
                       <?php } ?>
                     </div>
                   </div>
+                   <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">Giới thiệu</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][introduction]" placeholder="Giới thiệu dự án" id="input-introduction<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['introduction'] : ''; ?></textarea>
+                    </div>
+                  </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>"><?php echo $entry_description; ?></label>
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">Tổng quan dự án</label>
                     <div class="col-sm-10">
                       <textarea name="product_description[<?php echo $language['language_id']; ?>][description]" placeholder="<?php echo $entry_description; ?>" id="input-description<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['description'] : ''; ?></textarea>
                     </div>
                   </div>
+                    <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">Vị trí dự án</label>
+                    <div class="col-sm-10">
+                      <textarea class="html-editor" name="product_description[<?php echo $language['language_id']; ?>][location]" placeholder="<?php echo $entry_description; ?>" id="input-location<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['location'] : ''; ?></textarea>
+                    </div>
+                  </div>
+                        <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">Tiện ích dự án</label>
+                    <div class="col-sm-10">
+                      <textarea class="html-editor" name="product_description[<?php echo $language['language_id']; ?>][utility]" placeholder="<?php echo $entry_description; ?>" id="input-location<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['utility'] : ''; ?></textarea>
+                    </div>
+                  </div>
+                          <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">Phương thức thanh toán</label>
+                    <div class="col-sm-10">
+                      <textarea class="html-editor" name="product_description[<?php echo $language['language_id']; ?>][payment]" placeholder="<?php echo $entry_description; ?>" id="input-location<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['payment'] : ''; ?></textarea>
+                    </div>
+                  </div>
+                    
                   <div class="form-group required">
                     <label class="col-sm-2 control-label" for="input-meta-title<?php echo $language['language_id']; ?>"><?php echo $entry_meta_title; ?></label>
                     <div class="col-sm-10">
@@ -916,6 +941,8 @@
   <script type="text/javascript"><!--
 <?php foreach ($languages as $language) { ?>
 $('#input-description<?php echo $language['language_id']; ?>').summernote({height: 300});
+$('#input-introduction<?php echo $language['language_id']; ?>').summernote({height: 300});
+$('.html-editor').summernote({height: 300});
 <?php } ?>
 //--></script> 
   <script type="text/javascript"><!--

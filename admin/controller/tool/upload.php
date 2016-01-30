@@ -330,8 +330,8 @@ class ControllerToolUpload extends Controller {
 		if (!$this->user->hasPermission('modify', 'tool/upload')) {
 			$json['error'] = $this->language->get('error_permission');
 		}
-
 		if (!$json) {
+                   
 			if (!empty($this->request->files['file']['name']) && is_file($this->request->files['file']['tmp_name'])) {
 				// Sanitize the filename
 				$filename = html_entity_decode($this->request->files['file']['name'], ENT_QUOTES, 'UTF-8');

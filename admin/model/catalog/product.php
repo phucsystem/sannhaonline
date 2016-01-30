@@ -20,6 +20,7 @@ class ModelCatalogProduct extends Model {
                                 . "', location = '" . $this->db->escape($value['location']) 
                                 . "', utility = '" . $this->db->escape($value['utility']) 
                                 . "', payment = '" . $this->db->escape($value['payment']) 
+                                . "', video = '" . $this->db->escape($value['video']) 
                                 . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
@@ -153,6 +154,7 @@ class ModelCatalogProduct extends Model {
                                 . "', location = '" . $this->db->escape($value['location']) 
                                 . "', utility = '" . $this->db->escape($value['utility']) 
                                 . "', payment = '" . $this->db->escape($value['payment']) 
+                                . "', video = '" . $this->db->escape($value['video']) 
                                 . "', tag = '" . $this->db->escape($value['tag']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
@@ -443,6 +445,7 @@ class ModelCatalogProduct extends Model {
                             'location'      => $result['location'],
                             'utility'      => $result['utility'],
                             'payment'      => $result['payment'],
+                            'video'      => $result['video'],
 				'meta_title'       => $result['meta_title'],
 				'meta_description' => $result['meta_description'],
 				'meta_keyword'     => $result['meta_keyword'],

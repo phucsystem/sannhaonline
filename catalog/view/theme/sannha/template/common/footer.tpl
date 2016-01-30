@@ -31,6 +31,11 @@
     <script src="catalog/view/theme/sannha/stylesheet/js/bootstrap.js"></script>
     <script src="catalog/view/theme/sannha/stylesheet/js/bootstrap-select.js"></script>
     <script src="catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js" ></script>
+    <script src="catalog/view/javascript/camera/scripts/jquery.mobile.customized.min.js" ></script>
+    <script src="catalog/view/javascript/camera/scripts/jquery.easing.1.3.js" ></script>
+    <script src="catalog/view/javascript/camera/scripts/camera.min.js" ></script>
+    <script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script>
+
     <!-- Manual Script -->
     <script>
     $('#main-carousel').carousel({
@@ -48,6 +53,13 @@
                 direction: 'backwards',
                 frameRate: 60
             });
+            
+            jQuery('#camera_slider').camera({
+				height: '400px',
+				loader: false,
+				pagination: false,
+				thumbnails: true
+			});
         });
     })(jQuery);
     </script>

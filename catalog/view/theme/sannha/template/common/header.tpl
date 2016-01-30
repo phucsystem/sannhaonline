@@ -27,6 +27,9 @@
         <!-- Library CSS for this template -->
         <link href="catalog/view/theme/sannha/stylesheet/css/bootstrap-select.css" rel="stylesheet" />
         <link href="catalog/view/theme/sannha/stylesheet/css/jquery.simplyscroll.css" rel="stylesheet" />
+         <link href="catalog/view/theme/sannha/stylesheet/css/jquery.simplyscroll.css" rel="stylesheet" />
+         <link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" rel="stylesheet" />
+         <link href="catalog/view/javascript/camera/css/camera.css" rel="stylesheet" />
         <link href="catalog/view/theme/sannha/stylesheet/css/materialdesignicons.css" rel="stylesheet" />
         <link href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500italic,500,700,700italic' rel='stylesheet' type='text/css' />

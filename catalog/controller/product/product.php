@@ -390,6 +390,11 @@ class ControllerProductProduct extends Controller {
 			$data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
 			$data['rating'] = (int)$product_info['rating'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
+                        $data['introduction'] = html_entity_decode($product_info['introduction'], ENT_QUOTES, 'UTF-8');
+                        $data['location'] = html_entity_decode($product_info['location'], ENT_QUOTES, 'UTF-8');
+                        $data['utility'] = html_entity_decode($product_info['utility'], ENT_QUOTES, 'UTF-8');
+                        $data['payment'] = html_entity_decode($product_info['payment'], ENT_QUOTES, 'UTF-8');
+
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
 			$data['products'] = array();

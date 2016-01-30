@@ -982,3 +982,7 @@ body {
 .uppercase {
     text-transform: uppercase;
 }
+
+.row img{
+    max-width: 100% !important;
+}

@@ -81,13 +81,18 @@
                       <textarea class="html-editor" name="product_description[<?php echo $language['language_id']; ?>][utility]" placeholder="<?php echo $entry_description; ?>" id="input-location<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['utility'] : ''; ?></textarea>
                     </div>
                   </div>
-                          <div class="form-group">
+                  <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>">Phương thức thanh toán</label>
                     <div class="col-sm-10">
                       <textarea class="html-editor" name="product_description[<?php echo $language['language_id']; ?>][payment]" placeholder="<?php echo $entry_description; ?>" id="input-location<?php echo $language['language_id']; ?>"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['payment'] : ''; ?></textarea>
                     </div>
                   </div>
-                    
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label" for="input-description<?php echo $language['language_id']; ?>[video]">Đường link Video</label>
+                    <div class="col-sm-10">
+                      <textarea name="product_description[<?php echo $language['language_id']; ?>][video]" rows="2" placeholder="" id="input-video<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['video'] : ''; ?></textarea>
+                    </div>
+                  </div>
                   <div class="form-group required">
                     <label class="col-sm-2 control-label" for="input-meta-title<?php echo $language['language_id']; ?>"><?php echo $entry_meta_title; ?></label>
                     <div class="col-sm-10">
@@ -112,7 +117,7 @@
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-tag<?php echo $language['language_id']; ?>"><span data-toggle="tooltip" title="<?php echo $help_tag; ?>"><?php echo $entry_tag; ?></span></label>
                     <div class="col-sm-10">
-                      <input type="text" name="product_description[<?php echo $language['language_id']; ?>][tag]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['tag'] : ''; ?>" placeholder="<?php echo $entry_tag; ?>" id="input-tag<?php echo $language['language_id']; ?>" class="form-control" />
+                      <input type="text" name="product_description[<?php echo $language['language_id']; ?>][tag]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['tag'] : ''; ?>" placeholder="" id="input-tag<?php echo $language['language_id']; ?>" class="form-control" />
                     </div>
                   </div>
                 </div>

@@ -115,48 +115,71 @@ $('#button-search').on('click', function() {
 });
 //--></script> 
 <script type="text/javascript"><!--
+          var fileCount = 0;
 $('#button-upload').on('click', function() {
 	$('#form-upload').remove();
 	
-	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" value="" /></form>');
+	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" value="" multiple/></form>');
 	
 	$('#form-upload input[name=\'file\']').trigger('click');
 	
 	timer = setInterval(function() {
+                var successMsg = '';
 		if ($('#form-upload input[name=\'file\']').val() != '') {
+                  
 			clearInterval(timer);
-			
-			$.ajax({
+                    
+                        var files = $("#form-upload input[name=\'file\']")[0].files;
+                  
+                        for (var i = 0; i < files.length; i++){
+                            var fd = new FormData();    
+                            fd.append( 'file', files[i] );
+                              $.ajax({
 				url: 'index.php?route=common/filemanager/upload&token=<?php echo $token; ?>&directory=<?php echo $directory; ?>',
 				type: 'post',		
 				dataType: 'json',
-				data: new FormData($('#form-upload')[0]),
+				data: fd,
 				cache: false,
 				contentType: false,
-				processData: false,		
+				processData: false,	
+                                async: false,
 				beforeSend: function() {
 					$('#button-upload i').replaceWith('<i class="fa fa-circle-o-notch fa-spin"></i>');
 					$('#button-upload').prop('disabled', true);
 				},
 				complete: function() {
-					$('#button-upload i').replaceWith('<i class="fa fa-upload"></i>');
-					$('#button-upload').prop('disabled', false);
+                                        
+					if(fileCount == files.length){
+                                            $('#button-upload i').replaceWith('<i class="fa fa-upload"></i>');
+                                            $('#button-upload').prop('disabled', false); 
+                                            
+                                        }
 				},
 				success: function(json) {
+                                    fileCount++;
 					if (json['error']) {
 						alert(json['error']);
+                                                return;
 					}
 					
 					if (json['success']) {
-						alert(json['success']);
-						
-						$('#button-refresh').trigger('click');
+                                                successMsg = json['success'];
+						if(fileCount == files.length){
+                                                    alert(successMsg);
+                                                    $('#button-refresh').trigger('click');    
+                                                }
 					}
 				},			
 				error: function(xhr, ajaxOptions, thrownError) {
 					alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
 				}
-			});	
+			});	              
+                        }
+                        fileCount = 0;
+                          
+                      
+			
+			
 		}
 	}, 500);
 });

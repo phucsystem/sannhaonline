@@ -94,6 +94,18 @@
                   <?php } ?>
                 </div>
               </div>
+                  <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-facebook">Facebook Url:</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_facebook" value="<?php echo $config_facebook; ?>" placeholder="" id="input-facebook" class="form-control" />
+                </div>
+              </div>
+                  <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-google">Google Plus Url:</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_google" value="<?php echo $config_google; ?>" placeholder="" id="input-google" class="form-control" />
+                </div>
+              </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
                 <div class="col-sm-10">

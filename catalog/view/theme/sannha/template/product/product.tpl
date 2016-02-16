@@ -13,40 +13,69 @@
             </div>                    
             <div class="teacher-container">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 none-padding-left none-padding-right">
+                    <div class="fb-like" data-href="https://www.facebook.com/sannhaonline/" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+
+                    <?php if(!empty(strip_tags($introduction))){  ?>
                     <div class="panel-info">
                         <div class="list-container">
-                            <?php echo $introduction; ?>
-                        </div>
-                    </div>
-                     <div class="divider" style="margin-left: 0px;"></div>
-                    <div class="panel-info">
-                        <b>Giới Thiệu:</b>
-                        <div class="list-container">
-                            <?php echo $description; ?>
+                            <?php echo (!empty($introduction))?$introduction:''; ?>
                         </div>
                     </div>
                     <div class="divider" style="margin-left: 0px;"></div>
+                    <?php } ?>
+                    <?php if(!empty(strip_tags($description))){  ?>
                     <div class="panel-info">
-                        <b>Vị Trị Dự Án:</b>
+                        <b class="title"> <div class="mdi mdi-comment-account"></div> Tổng Quan Dự Án:</b>
                         <div class="list-container">
-                              <?php echo $location; ?>
+                            <?php echo (!empty($description))?$description:''; ?>
                         </div>
                     </div>
                     <div class="divider" style="margin-left: 0px;"></div>
+                    <?php } ?>
+                    <?php if(!empty(strip_tags($location))){ ?>
                     <div class="panel-info">
-                        <b>Tiện Ích:</b>
+                        <b class="title"><div class="mdi mdi-map-marker-multiple"></div> Vị Trị Dự Án:</b>
                         <div class="list-container">
-                            <?php echo $utility; ?>
+                            <?php echo (!empty($location))?$location:''; ?>
                         </div>
                     </div>
                     <div class="divider" style="margin-left: 0px;"></div>
+                    <?php } ?>
+                    <?php if(!empty(strip_tags($utility))){ ?>
                     <div class="panel-info">
-                        <b>Phương Thức Thanh Toán:</b>
+                        <b class="title"><div class="mdi mdi-cart-outline"></div> Tiện Ích:</b>
                         <div class="list-container">
-                            <?php echo $payment; ?>
+                            <?php echo (!empty($utility))?$utility:''; ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <div class="divider" style="margin-left: 0px;"></div>
+                    <?php if(!empty(strip_tags($payment))){ ?>
+                    <div class="panel-info">
+                        <b class="title"><div class="mdi mdi-currency-usd"></div> Phương Thức Thanh Toán:</b>
+                        <div class="list-container">
+                            <?php echo (!empty($payment))?$payment:''; ?>
                         </div>
                     </div>
                     <div class="divider" style="margin-left: 0px;"></div>
+                    <?php } ?>
+                    <div class="panel-info">
+                        <?php if(!empty($images)){ ?>
+                        <b class="title"><div class="mdi mdi-image-area"></div> Hình Ảnh Dự Án:</b>
+                        <div class="list-container">
+                            <div id="links">
+                                <?php foreach ($images as $image) { ?>
+                                <div class="col-xs-12 col-sm-12  col-lg-3">
+                                    <a href="<?php echo $image['popup']; ?>"  title="<?php echo $heading_title; ?>" data-gallery>
+                                        <img src="<?php echo $image['popup']; ?>" alt="<?php echo $heading_title; ?>">
+                                    </a>
+                                </div>
+                                <?php  } ?>
+
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </div>
                 </div>
                 <div style="clear: both"></div>
             </div>                   
@@ -57,26 +86,22 @@
                 <div class="title-hot title-link">                        
                     <span class="ml-5">Thông Tin Liên Hệ</span>
                 </div>  
-                <div class="module-element-link"> 
-                    <div class="panel none-margin-bottom">
-                        <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
-                            <h4 class="panel-title">
-                                <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1">
-                                    Lorem Ipsum Dolor Sit Amet
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1" aria-expanded="true">
-                            <ul class="list-group">
-                                <li class="list-group-item"><a href="#">Lorem Ipsum Dolor Sit Amet</a></li>
-                                <li class="list-group-item"><a href="#">Lorem Ipsum Dolor Sit Amet</a></li>
-                                <li class="list-group-item"><a href="#">Lorem Ipsum Dolor Sit Amet</a></li>
-                            </ul>                                
-                        </div>
-                    </div>
-                </div>         
+                <div class="module-element-link">                        
+                    <div class="related-content">
+                        <ul>
+                            <li>
+                                <div class="mdi mdi-phone"></div> (HOTLINE) 0906 271 879
+                            </li>
+                            <li>
+                                <div class="mdi mdi-email"></div> ngathanh225@gmail.com
+                            </li>
+                        </ul>
+                    </div>                    
+                </div>      
             </div>
         </div>
+
+
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <div class="title-hot mb-10">
                 <div class="mdi mdi-bookmark icon-header"></div>
@@ -108,4 +133,41 @@
             </div>                    
         </div>
     </div>
+
+
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php echo $footer; ?>

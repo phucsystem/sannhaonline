@@ -56,8 +56,8 @@ body {
     font-size: 14px;
 }
 .ongoing-course .img-container img {
-    width: 255px;
-    height: 155px;
+    width: 340px;
+    height: 180px;
 }
 .module-element-main .img-container {
     display: block;
@@ -241,6 +241,15 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.ongoing-course-wrapper .product-title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #005596;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .ongoing-course .title-hot {
     font-size: 18px;
     font-weight: bold;
@@ -278,6 +287,7 @@ body {
     border: 1px solid #dedede;
     margin-top: 10px;
     background: #fff;
+    height: 300px;
 }
 .module-element-main {
     background: #fff;
@@ -985,4 +995,18 @@ body {
 
 .row img{
     max-width: 100% !important;
+}
+
+#blueimp-gallery img{
+    max-width: 700px;
+}
+
+b.title{
+    font-size:18px;
+    color:#0055C1;
+}
+
+#carousel-marquee img{
+	background: white;
+        border:grey solid thin;
 }

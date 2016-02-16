@@ -1,4 +1,3 @@
-
 <!-- Ongoing Courses -->
  <?php foreach ($categories as $category) { $products = $category['products']; ?>
  <div class="row mb-30">
@@ -6,18 +5,18 @@
         <div class="ongoing-course">
             <div class="title-hot">
                 <div class="mdi mdi-home-modern icon-header"></div>
-                <span class="ml-5"><?php echo $category['name']; ?></span>
+                <span class="ml-5 uppercase"><?php echo $category['name']; ?></span>
             </div>
                 <?php foreach ($products as $product) { ?>
-            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 ongoing-course-wrapper none-border-right">
+            <div class="col-xs-12 col-sm-6 col-md-1 col-lg-4 ongoing-course-wrapper none-border-right">
                 <div class="new-course">
                     <div class="img-container">
-                        <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"><a/>
+                        
+                            <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"><a/>
+                        
                     </div>
                     <div class="content-container">
-                        <h3>
-                            <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-                        </h3>
+                            <a href="<?php echo $product['href']; ?>">  <span class="product-title"><?php echo $product['name']; ?>   </span></a>
                         <div class="intro-text">
                             <p><?php echo $product['description']; ?></p>
                         </div>

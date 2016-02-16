@@ -32,6 +32,8 @@
          <link href="catalog/view/javascript/camera/css/camera.css" rel="stylesheet" />
         <link href="catalog/view/theme/sannha/stylesheet/css/materialdesignicons.css" rel="stylesheet" />
         <link href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" rel="stylesheet" />
+        <link href="catalog/view/javascript/Bootstrap-Image-Gallery/css/blueimp-gallery.min.css" rel="stylesheet" />
+        <link href="catalog/view/javascript/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.css" rel="stylesheet" />
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500italic,500,700,700italic' rel='stylesheet' type='text/css' />
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
         <!-- Customize CSS -->
@@ -47,6 +49,15 @@
     </head>
 
     <body>
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
         <!-- Menu Top -->
         <nav class="navbar-top hidden-xs hidden-sm">
             <div class="container-fluid">
@@ -69,24 +80,23 @@
                                 <li>
                                     <label class="connect-us" style="margin-right: 0px">Kết nối với chúng tôi:</label>
                                 </li>
+                                <?php if(!empty($facebook)){ ?>
                                 <li>
-                                    <a title="Facebook" href="">
+                                    <a title="Facebook" href="<?= $facebook?>" target="blank">
                                         <i class="mdi mdi-facebook-box"></i>
                                     </a>
                                 </li>
+                                <?php } ?>
+                                 <?php if(!empty($google)){ ?>
                                 <li>
-                                    <a title="Google Plus" href="">
+                                    <a title="Google Plus" href="<?= $google?>" target="blank">
                                         <i class="mdi mdi-google-plus-box"></i>
                                     </a>
                                 </li>
-                                <li>
-                                    <a title="Twitter" href="">
-                                        <i class="mdi mdi-twitter-box"></i>
-                                    </a>
-                                </li>
+                                <?php } ?>
                                 <br/>
                                 <li>                                
-                                    <label class="hotline connect-us">0909 900 009 (Mr.ABC)</label> 
+                                    <label class="hotline connect-us"><?= $telephone?> (<?= $owner?>)</label> 
                                 </li>
                             </ul>
                             <div style="clear:both"></div>

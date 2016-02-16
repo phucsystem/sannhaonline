@@ -1,4 +1,4 @@
- <footer class="footer">
+</div> <footer class="footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -35,6 +35,9 @@
     <script src="catalog/view/javascript/camera/scripts/jquery.easing.1.3.js" ></script>
     <script src="catalog/view/javascript/camera/scripts/camera.min.js" ></script>
     <script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    
+    <script src="catalog/view/javascript/Bootstrap-Image-Gallery/js/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
+    <script src="catalog/view/javascript/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
 
     <!-- Manual Script -->
     <script>

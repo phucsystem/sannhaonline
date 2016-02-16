@@ -575,6 +575,18 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_layout_id'] = $this->config->get('config_layout_id');
 		}
+                
+                if (isset($this->request->post['config_facebook'])) {
+			$data['config_facebook'] = $this->request->post['config_facebook'];
+		} else {
+			$data['config_facebook'] = $this->config->get('config_facebook');
+		}
+                
+                if (isset($this->request->post['config_google'])) {
+			$data['config_google'] = $this->request->post['config_google'];
+		} else {
+			$data['config_google'] = $this->config->get('config_google');
+		}
 
 		$this->load->model('design/layout');
 

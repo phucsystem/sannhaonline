@@ -44,6 +44,8 @@ class ControllerModuleLatest extends Controller {
                     } else {
                         $price = false;
                     }
+                    
+                    $quantity = $result['quantity'];
 
                     if ((float) $result['special']) {
                         $special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
@@ -69,6 +71,7 @@ class ControllerModuleLatest extends Controller {
                         'name' => $result['name'],
                         'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
                         'price' => $price,
+                        'quantity' => $quantity,
                         'special' => $special,
                         'tax' => $tax,
                         'rating' => $rating,

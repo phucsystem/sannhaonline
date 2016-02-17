@@ -11,16 +11,16 @@
             <div class="col-xs-12 col-sm-6 col-md-1 col-lg-4 ongoing-course-wrapper none-border-right">
                 <div class="new-course">
                     <div class="img-container">
-                        
                             <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"><a/>
-                        
                     </div>
                     <div class="content-container">
                             <a href="<?php echo $product['href']; ?>">  <span class="product-title"><?php echo $product['name']; ?>   </span></a>
                         <div class="intro-text">
                             <p><?php echo $product['description']; ?></p>
                         </div>
-                        <div datetime="" class="date-published"><span class="mdi  mdi-tag"></span><span class="date-inside"><?php echo $product['price']; ?></span>
+                        <div datetime="" class="date-published">
+                            <span class="date-inside">Giá: <?php echo $product['price']; ?></span>
+                            <span class="date-inside" style="float:right">Diện tích: <?php echo $product['quantity']; ?> m2</span>
                         </div>
                     </div>
                 </div>

@@ -270,7 +270,8 @@ body {
 }
 .ongoing-course .new-course .date-published {
     font-weight: 500;
-    color: #ff9200;
+    color: #37a344;
+    font-size: 15px;
 }
 .ongoing-course .new-course .date-published .date-inside {
     padding-left: 5px;
@@ -553,6 +554,13 @@ body {
     color: #005596;
     font-family: 'Roboto Condensed', sans-serif;
 }
+.side-title-hot {
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    color: #005596;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 .title-hot .icon-header {
     padding: 8px;
     background: #00a05b;
@@ -657,7 +665,9 @@ body {
     height: 180px;
 }
 .newspaper .media-left {
+    display: block;
     padding-right: 15px;
+    float:left;
 }
 .newspaper ul li .media-body h4 {
     margin-top: 0;
@@ -1009,4 +1019,40 @@ b.title{
 #carousel-marquee img{
 	background: white;
         border:grey solid thin;
+}
+
+.ongoing-course .intro-text{
+    height: 45px;
+}
+
+.tt-project-info{
+    float: left;
+    width: 80px;
+    height: 69px;
+    border: 1px solid #e3e3e3;
+    padding: 3px;
+    background: #fff;
+}
+.project-info{
+    float: left;
+    width: 140px;
+    margin-left: 8px;
+}
+
+.project-info a{
+    font-weight: bold;
+    color:#005596;
+}
+
+.project-list{
+    padding: 10px 15px;
+    float: left;
+    width:100%;
+    border-top: 1px solid #e2eef2
+}
+
+.highlight-info{
+    font-weight: 500;
+    color: #37a344;
+    font-size: 15px;
 }

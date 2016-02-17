@@ -102,35 +102,23 @@
         </div>
 
 
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-            <div class="title-hot mb-10">
-                <div class="mdi mdi-bookmark icon-header"></div>
-                <span class="ml-5">Dự Án Khác</span>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <div class="link-container">
+                <div class="title-hot title-link">                        
+                    <span class="ml-5">Dự Án Khác</span>
+                </div>  
+                <div class="module-element-link "> 
+                    <?php foreach($other_products as $product){ ?>
+                    <div class="related-content project-list">
+                        <a href="<?php echo $product['href']; ?>" title="<?php echo $product['name']; ?>" ><img class="tt-project-info" src="<?php echo $product['thumb']; ?>" alt="" ></a>
+                            <div class="project-info">
+                                <a href="<?php echo $product['href']; ?>" title="<?php echo $product['name']; ?> "><?php echo $product['name']; ?> </a>
+                                <p>Giá: <span class="highlight-info"><?php echo $product['price']; ?></span><br>Diện tích: <span class="highlight-info"><?php echo $product['quantity']; ?> m2</span></p>
+                            </div>
+                    </div>
+                    <?php } ?>
+                </div>         
             </div>
-            <div class="video-wrapper">
-                <div class="mb-15">
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="thumbnail-embed-video">
-                            <img class="embed-video" src="images/customer.jpg">
-                            <a href="khach-hang-chi-tiet.html">Lorem Ipsum Dolor Sit Amet Tuol Deh</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="thumbnail-embed-video">
-                            <img class="embed-video" src="images/customer.jpg">
-                            <a href="khach-hang-chi-tiet.html">Lorem Ipsum Dolor Sit Amet Tuol Deh</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="thumbnail-embed-video">
-                            <img class="embed-video" src="images/customer.jpg">
-                            <a href="khach-hang-chi-tiet.html">Lorem Ipsum Dolor Sit Amet Tuol Deh</a>
-                        </div>
-                    </div>
-                    <div style="clear:both"></div>
-                </div>                       
-                <div style="clear:both"></div>
-            </div>                    
         </div>
     </div>
 
